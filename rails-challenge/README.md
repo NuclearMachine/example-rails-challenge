@@ -1,24 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Setup
 
-* Ruby version
+Make sure you have ruby 3.1.0 and the bundler gem
 
-* System dependencies
+1. Bundle and install gem dependencies
 
-* Configuration
+```shell
+bundle
+```
 
-* Database creation
+2. Create and Migrate the database
 
-* Database initialization
+```ruby
+rails db:create
+rails db:migrate
+```
 
-* How to run the test suite
+3. Seed the database
 
-* Services (job queues, cache servers, search engines, etc.)
+```ruby
+rails db:seed
+```
 
-* Deployment instructions
+## Notes
 
-* ...
+*charges* scaffold is called credit_card_charges
+
+I encountered a rails bug with rspec views, so I used capybara and added the unit tests in the features folder.
