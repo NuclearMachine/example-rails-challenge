@@ -1,0 +1,16 @@
+<div id="<%= dom_id credit_card_charge %>">
+  <p>
+    <strong>Customer Name:</strong>
+    <%= credit_card_charge.customer.full_name %>
+  </p>
+
+  <p>
+    <strong>Amount:</strong>
+    <%= credit_card_charge.amount %>
+  </p>
+
+  <p>
+    <strong>Created:</strong>
+    <%= credit_card_charge.created_at.strftime("%B %d, %Y") %>
+  </p>
+</div>

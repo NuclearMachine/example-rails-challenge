@@ -1,0 +1,37 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Credit card charges</h1>
+
+<div id="credit_card_charges">
+  <% if @failed_charges.any? %>
+    <div id="failed-transactions" style="background: #FF0000">
+      <h1>Failed Charges</h1>
+
+      <% @failed_charges.each do |credit_card_charge| %>
+         <%= render credit_card_charge %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% if @disputed_charges.any? %>
+    <div id="disputed-transactions" style="background: #FF5400">
+      <h1>Disputed Charges</h1>
+
+      <% @disputed_charges.each do |credit_card_charge| %>
+         <%= render credit_card_charge %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% if @successful_charges.any? %>
+    <div id="successful-transactions">
+      <h1>Successful Charges</h1>
+
+      <% @successful_charges.each do |credit_card_charge| %>
+         <%= render credit_card_charge %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "New credit card charge", new_credit_card_charge_path %>

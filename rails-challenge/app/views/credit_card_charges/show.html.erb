@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @credit_card_charge %>
+
+<div>
+  <%= link_to "Edit this credit card charge", edit_credit_card_charge_path(@credit_card_charge) %> |
+  <%= link_to "Back to credit card charges", credit_card_charges_path %>
+
+  <%= button_to "Destroy this credit card charge", @credit_card_charge, method: :delete %>
+</div>
